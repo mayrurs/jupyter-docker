@@ -7,7 +7,9 @@ services:
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=compute,utility
     volumes:
-      - ${HOME}/notebooks:/workspace
+      - ${HOME}/notebooks:/workspace/notebooks
+      - ${HOME}/repos:/workspace/repos
+      - ${HOME}/repos:/workspace/tutorials
       - ./settings/user-settings:/root/.jupyter/lab/user-settings
 
     working_dir: /workspace

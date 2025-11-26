@@ -23,8 +23,8 @@ ENV PATH="/opt/venv/bin:$PATH"
 # Upgrade pip
 RUN pip install --upgrade pip
 
-# Install latest nightly PyTorch build with CUDA 12.1 support
-RUN pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
+# Install latest nightly PyTorch build with CUDA 
+RUN pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu130
 
 # Install JupyterLab and vim extension
 RUN pip install jupyterlab jupyterlab_vim
